@@ -1,0 +1,28 @@
+domain: EXT
+type: PRINTER
+synthesis:
+  name: device_name
+  identifier: device_name
+  encodeIdentifierInGUID: true
+
+  conditions:
+  - attribute: provider
+    value: kentik-printer
+
+  tags:
+    src_addr:
+      entityTagName: device_ip
+      multiValue: false
+    tags.container_service:
+      entityTagName: container_service
+      multiValue: false
+
+goldenTags:
+- device_ip
+- container_service
+
+dashboardTemplates:
+  kentik:
+    template: kentik-dashboard.json
+  kentik/zebra-printer:
+    template: zebra-printer-dashboard.json

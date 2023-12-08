@@ -1,8 +1,0 @@
-domain: INFRA
-type: MSSQLINSTANCE
-goldenTags:
-- mssql.host
-- mssql.instance
-configuration:
-  entityExpirationTime: DAILY
-  alertable: true

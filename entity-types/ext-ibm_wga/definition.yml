@@ -1,0 +1,26 @@
+domain: EXT
+type: IBM_WGA
+synthesis:
+  name: device_name
+  identifier: device_name
+  encodeIdentifierInGUID: true
+
+  conditions:
+  - attribute: provider
+    value: kentik-ibm-wga
+
+  tags:
+    src_addr:
+      entityTagName: device_ip
+      multiValue: false
+    tags.container_service:
+      entityTagName: container_service
+      multiValue: false
+    
+goldenTags:
+- device_ip
+- container_service
+
+dashboardTemplates:
+  kentik:
+    template: ibm-wga-dashboard.json

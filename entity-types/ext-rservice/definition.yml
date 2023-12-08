@@ -1,0 +1,123 @@
+domain: EXT
+type: RSERVICE
+synthesis:
+  rules:
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'cap.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: service_name
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'cap.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'platform.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'teambuilder.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'store.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'missions.'
+
+  - compositeIdentifier: 
+      separator: ":"
+      attributes:
+      - rfc190_environment
+      - application
+    name: application
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: metricName
+      present: true
+    - attribute: rfc190Scope
+      present: true
+    - attribute: application
+      prefix: 'yourshop.'
+
+  tags:
+    rfc190_component:
+    rfc190_datacenter:
+    rfc190_environment:
+    rfc190_product:
+    newrelic.source:
+
+dashboardTemplates:
+  newRelic:
+    template: dashboard.json
+
+configuration:
+  entityExpirationTime: EIGHT_DAYS
+  alertable: true

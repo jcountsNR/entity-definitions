@@ -1,0 +1,17 @@
+domain: INFRA
+type: VSPHEREHOST
+goldenTags:
+- vsphere.hostClusterName
+- vsphere.hostOverallStatus
+- vsphere.hostDatacenterName
+- vsphere.hostResourcePoolNameList
+- vsphere.hostDatastoreNameList
+- vsphere.hostHypervisorHostname
+configuration:
+  entityExpirationTime: DAILY
+  alertable: true
+
+dashboardTemplates:
+  # This should match the entity created from the ohi in the infra pipeline
+  newRelic:
+    template: newrelic_dashboard.json

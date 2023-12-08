@@ -1,0 +1,23 @@
+domain: INFRA
+type: AZUREVIRTUALMACHINESCALESET
+goldenTags:
+- azure.regionName
+- azure.subscriptionId
+- azure.type
+- azure.resourceGroupName
+configuration:
+  entityExpirationTime: DAILY
+  alertable: true
+synthesis:
+  tags:
+    newrelic.cloudIntegrations.providerAccountName:
+      entityTagNames: [newrelic.cloudIntegrations.providerAccountName, providerAccountName]
+  rules:
+  - identifier: azure.resourceId
+    name: displayName
+    legacyFeatures:
+      overrideGuidType: true
+    encodeIdentifierInGUID: true
+    conditions:
+    - attribute: azure.resourceType
+      value: microsoft.compute/virtualmachinescalesets

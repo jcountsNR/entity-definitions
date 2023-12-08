@@ -1,5 +1,0 @@
-domain: INFRA
-type: F5NODE
-configuration:
-  entityExpirationTime: DAILY
-  alertable: true

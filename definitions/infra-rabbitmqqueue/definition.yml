@@ -1,7 +1,0 @@
-domain: INFRA
-type: RABBITMQQUEUE
-goldenTags:
-- account
-configuration:
-  entityExpirationTime: DAILY
-  alertable: true

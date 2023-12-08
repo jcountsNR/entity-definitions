@@ -1,0 +1,13 @@
+domain: INFRA
+type: KAFKABROKER
+goldenTags:
+- kafka.clusterName
+- kafka.brokerId
+configuration:
+  entityExpirationTime: DAILY
+  alertable: true
+
+dashboardTemplates:
+  # This should match the entity created from the ohi in the infra pipeline
+  newRelic:
+    template: newrelic_dashboard.json

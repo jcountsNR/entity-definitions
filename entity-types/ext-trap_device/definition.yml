@@ -1,0 +1,30 @@
+domain: EXT
+type: TRAP_DEVICE
+
+configuration:
+  entityExpirationTime: QUARTERLY
+
+synthesis:
+  name: device_name
+  identifier: device_name
+  encodeIdentifierInGUID: true
+
+  conditions:
+  - attribute: provider
+    value: kentik-trap-device
+
+  tags:
+    src_addr:
+      entityTagName: src_addr
+      multiValue: false
+    tags.container_service:
+      entityTagName: container_service
+      multiValue: false
+    
+goldenTags:
+- src_addr
+- container_service
+
+dashboardTemplates:
+  kentik/snmp-trap-events:
+    template: kentik-trap-events-dashboard.json

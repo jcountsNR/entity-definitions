@@ -1,5 +1,0 @@
-domain: INFRA
-type: F5SYSTEM
-configuration:
-  entityExpirationTime: DAILY
-  alertable: true

@@ -1,5 +1,0 @@
-domain: INFRA
-type: COUCHBASEBUCKET
-configuration:
-  entityExpirationTime: DAILY
-  alertable: true
